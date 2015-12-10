@@ -12,6 +12,7 @@ describe('getElementsByClassName', function(){
 
   it('should match the results of calling the built-in function', function(){
     $('body').addClass('targetClassName');
+    //??Above line should be $('.targetClassName') ??with period before class, with $('body') too maybe? but not "addClass"
     htmlStrings.forEach(function(htmlString){
       var $rootElement = $(htmlString);
       $('body').append($rootElement);
