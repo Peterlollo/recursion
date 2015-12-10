@@ -7,4 +7,15 @@
 var getElementsByClassName = function(className
 ){
   // your code here
+  var result = [];
+  var targetStr = '';
+  targetStr += '.';
+  targetStr += className;
+  return targetStr;
+  if($('.className') === undefined) {
+  	return result;
+  }
+  result.push($('.className').NODE);
+  NODE.removeClass('.className');
+  return result.push(getElementsByClassName(className));
 };
