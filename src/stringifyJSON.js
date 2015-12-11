@@ -9,7 +9,10 @@
 
 var stringifyJSON = function(obj) {
   var result = '';
-  if(obj === null) {
+  if(obj === undefined || typeof object === 'function') {
+    return;
+  }
+  else if(obj === null) {
     return 'null'
   }
   else if(Array.isArray(obj)) {
@@ -43,6 +46,10 @@ var stringifyJSON = function(obj) {
     if(count>0) {
       for(var prop in obj) {
         count --;
+        if(prop === undefined || obj[prop] === undefined || typeof prop === "function" || typeof obj[prop] === "function") {
+          result += '}';
+          return result;
+        }
         result += stringifyJSON(prop) + ':';
         result += stringifyJSON(obj[prop]);
         if(count !== 0) {
