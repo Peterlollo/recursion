@@ -3,10 +3,6 @@
 
 // but you don't so you're going to write it from scratch:
 
-
-
-
-
 var stringifyJSON = function(obj) {
   var result = '';
   if(obj === undefined || typeof object === 'function') {
